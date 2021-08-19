@@ -8,8 +8,8 @@ function App() {
   var [notesTable, setNotesTable] = useState("");
   function billInputHandler(event) {
     var inputBill = event.target.value;
-    billAmount = parseInt(inputBill);
-    if (parseInt(inputBill) > 0) {
+    billAmount = Number(inputBill);
+    if (Number(inputBill) > 0) {
       nextButton = (
         <div className="container">
           <label for="cash-amount">Cash Amount 💲 </label>
@@ -23,10 +23,7 @@ function App() {
         </div>
       );
       setNextbutton(nextButton);
-    } else if (
-      Number.isNaN(parseInt(inputBill)) &&
-      !/[a-zA-Z]/.test(inputBill)
-    ) {
+    } else if (Number.isNaN(Number(inputBill)) || inputBill.length === 0) {
       nextButton = "";
       setNextbutton(nextButton);
       setNotesTable("");
@@ -37,7 +34,7 @@ function App() {
     }
   }
   function calculateReturn(inputCash, billAmount) {
-    var returnChange = parseInt(inputCash) - billAmount;
+    var returnChange = Number(inputCash) - billAmount;
     var listDenomination = [2000, 500, 100, 20, 10, 5, 1];
     var listNumuberOfNotes = [];
     for (let i = 0; i < 7; i++) {
@@ -99,7 +96,7 @@ function App() {
   function cashInputHandler(event) {
     var inputCash = event.target.value;
 
-    if (parseInt(inputCash) >= billAmount) {
+    if (Number(inputCash) >= billAmount) {
       checkButton = (
         <div className="container">
           <button
@@ -111,15 +108,12 @@ function App() {
         </div>
       );
       setCheckbutton(checkButton);
-    } else if (
-      Number.isNaN(parseInt(inputCash)) &&
-      !/[a-zA-Z]/.test(inputCash)
-    ) {
+    } else if (Number.isNaN(Number(inputCash)) || inputCash.length === 0) {
       checkButton = "";
       setCheckbutton(checkButton);
       setNotesTable("");
     } else {
-      var difference = billAmount - parseInt(inputCash);
+      var difference = billAmount - Number(inputCash);
       checkButton = (
         <span
           style={{
