@@ -1,7 +1,10 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #dbeafe;
+}
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -28,11 +31,65 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  margin: auto;
+}
+body {
+  margin: 7rem auto;
+  background-color: var(--secondary-color);
+}
+.notes-table {
+  border: 2px var(--primary-color) solid;
+}
+tr {
+  height: 50px;
+  /* width: auto; */
+}
+
+th {
+  color: var(--primary-color);
+  width: 35%;
+  background-color: var(--secondary-color);
+  font-weight: 700;
+}
+td {
+  font-weight: 700;
+  /* padding: 1rem 1.5rem; */
+  background-color: var(--secondary-color);
+}
+#check-button {
+  margin: 1rem auto;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px var(--primary-color) solid;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+#check-button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+label {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.enter-amount {
+  margin: 1rem auto;
+  min-height: 30px;
+  font-size: medium;
+  border: 2px var(--primary-color) solid;
+  padding: 0 0.5rem;
+  border-radius: 0.3rem;
+}
+.text-amount {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
 }
