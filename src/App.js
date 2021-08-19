@@ -99,7 +99,7 @@ function App() {
   function cashInputHandler(event) {
     var inputCash = event.target.value;
 
-    if (parseInt(inputCash) > billAmount) {
+    if (parseInt(inputCash) >= billAmount) {
       checkButton = (
         <div className="container">
           <button
