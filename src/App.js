@@ -9,7 +9,6 @@ function App() {
   function billInputHandler(event) {
     var inputBill = event.target.value;
     billAmount = parseInt(inputBill);
-    console.log(inputBill);
     if (parseInt(inputBill) > 0) {
       nextButton = (
         <div className="container">
@@ -45,7 +44,6 @@ function App() {
       listNumuberOfNotes.push(Math.trunc(returnChange / listDenomination[i]));
       returnChange = returnChange % listDenomination[i];
     }
-    console.log(listNumuberOfNotes);
     notesTable = (
       <div className="container">
         <table className="notes-table">
