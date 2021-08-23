@@ -10,4 +10,4 @@
 
 4. The result is shown in a tabular form with number of notes to be returned and the denomination.
 
-5. Hosted at
+5. Hosted at https://rakshith-cash-register.netlify.app/
