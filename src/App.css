@@ -40,6 +40,8 @@
 body {
   margin: 7rem auto;
   background-color: var(--secondary-color);
+  min-height: 100%;
+  /* position: relative; */
 }
 .notes-table {
   border: 2px var(--primary-color) solid;
@@ -92,4 +94,33 @@ label {
   color: var(--primary-color);
   font-weight: 700;
   font-size: 1.2rem;
+}
+.socials {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.list {
+  list-style: none;
+  text-align: center;
+  margin: 2.5rem auto;
+  margin-left: -40px;
+}
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin: 0 auto;
+  bottom: 0;
+  margin-top: 15rem;
+}
+
+.list li {
+  display: inline;
+  margin: 0rem 0.5rem;
 }

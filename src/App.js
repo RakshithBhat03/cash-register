@@ -52,12 +52,14 @@ function App() {
       setNotesTable("");
     } else {
       var returnChange = Number(inputCash) - billAmount;
+      console.log(returnChange);
       var listDenomination = [2000, 500, 100, 20, 10, 5, 1];
       var listNumuberOfNotes = [];
       for (let i = 0; i < 7; i++) {
         listNumuberOfNotes.push(Math.trunc(returnChange / listDenomination[i]));
         returnChange = returnChange % listDenomination[i];
       }
+      var returnChange = Number(inputCash) - billAmount;
       notesTable = (
         <div className="container">
           <table className="notes-table">
@@ -68,7 +70,7 @@ function App() {
                 fontWeight: "700",
                 fontSize: "1.5rem",
               }}>
-              Return Change 💲
+              Return Change {returnChange}💲
             </caption>
             <tr>
               <th>Number of notes</th>
@@ -181,6 +183,43 @@ function App() {
         {checkButton}
         {notesTable}
       </div>
+      <footer>
+        <div class="socials">My Socials</div>
+        <ul class="list">
+          <li>
+            <a
+              href="https://github.com/RakshithBhat03"
+              target="_blank"
+              class="link">
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/RakshithBhat1"
+              target="_blank"
+              class="link">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rakshithbhat/"
+              target="_blank"
+              class="link">
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://rakshithbhat.netlify.app/"
+              target="_blank"
+              class="link">
+              Portfolio
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
   );
 }
