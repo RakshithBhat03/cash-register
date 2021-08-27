@@ -189,6 +189,7 @@ function App() {
           <li>
             <a
               href="https://github.com/RakshithBhat03"
+              rel="noreferrer noopener"
               target="_blank"
               class="link">
               Github
@@ -197,6 +198,7 @@ function App() {
           <li>
             <a
               href="https://twitter.com/RakshithBhat1"
+              rel="noreferrer noopener"
               target="_blank"
               class="link">
               Twitter
@@ -205,6 +207,7 @@ function App() {
           <li>
             <a
               href="https://www.linkedin.com/in/rakshithbhat/"
+              rel="noreferrer noopener"
               target="_blank"
               class="link">
               Linkedin
@@ -213,6 +216,7 @@ function App() {
           <li>
             <a
               href="https://rakshithbhat.netlify.app/"
+              rel="noreferrer noopener"
               target="_blank"
               class="link">
               Portfolio
