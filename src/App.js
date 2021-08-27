@@ -59,7 +59,7 @@ function App() {
         listNumuberOfNotes.push(Math.trunc(returnChange / listDenomination[i]));
         returnChange = returnChange % listDenomination[i];
       }
-      var returnChange = Number(inputCash) - billAmount;
+      returnChange = Number(inputCash) - billAmount;
       notesTable = (
         <div className="container">
           <table className="notes-table">
